@@ -1,5 +1,36 @@
-line 1
+<!DOCTYPE html>
+<html lang="en">
 
-TESTING PHI
-FIXED
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibeify</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+        integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gruppo">
+    <link rel="stylesheet" href="./style.css" />
+</head>
 
+<body>
+    <header>
+        <div class="pure-menu custom-restricted-width">
+            <span class="pure-menu-heading" id="header">Vibeify</span>
+            </header>
+
+    <div>
+        <h1 id="image-header">Import an Image for the Vibes</h1>
+        <form action="/action_page.php">
+            <input type="file" id="myFile" name="filename">
+            <input type="submit" id="submit">
+            </form>
+    </div>
+
+    <div id="uploaded-image">
+        <img class="pure-img" src="..." alt="" id="hidden"></img>       
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
