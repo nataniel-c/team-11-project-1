@@ -16,13 +16,13 @@
     text-align: center;
 }
 
-#myFile {
+#userInput {
     background-color: aliceblue;
     color: black;
 }
 
-#myFile,
-#submit {
+#userInput,
+#submit {            
     border: none;
     font-size: 22px;
     line-height: 20px;
@@ -41,6 +41,4 @@
     color: aliceblue;
 }
 
-#hidden {
-    display: none;
-}
+#hidden { display: none; }
