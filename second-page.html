@@ -13,12 +13,12 @@
 
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-        <a class="pure-menu-heading" href="">Vibeify</a>
+        <a class="pure-menu-heading" href="./index.html">Vibeify</a>
     </div>
 </div>
 
 <div class="splash-container">
-    <div >
+    <div>
         <div class="splash pure-g">
             <div id=song-image-container class="pure-u-1-2">
                 <img id="song-image" src="https://images.theconversation.com/files/512871/original/file-20230301-26-ryosag.jpg?ixlib=rb-1.1.0&rect=97%2C79%2C5799%2C5817&q=45&auto=format&w=926&fit=clip">
@@ -28,7 +28,9 @@
                 <h2 id="author">Mort Garson</h2>
                 <h2 id="album">Mother Earth's Plantasia</h2>
                 <div id="spotify-player">
-                    Spotify Player Placeholder
+                    <iframe id="embedded-player" style="border-radius:12px" src="https://open.spotify.com/embed/track/37pKTyMwalomKCZjxTc2QZ?utm_source=generator&theme=0" 
+                    width="100%" height="352" frameBorder="0" allowfullscreen="" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
                 <p id="spotify-btn-container">
                     <a href="http://purecss.io" class="pure-button pure-button-primary">Listen on Spotify</a>
@@ -38,9 +40,15 @@
     </div>
 </div>
 
-<div class="footer l-box is-center">
+<div>
+    <a href="./index.html" class="btn-back">
+      Go Back
+    </a>
+  </div>
+
+<footer class="l-box is-center">
     Made by Team 11!
-</div>
+</footer>
 
 </body>
 </html>
