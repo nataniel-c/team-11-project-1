@@ -1,12 +1,21 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: rgb(37, 32, 31)
+}
+
+:root {
+    --one: rgb(22, 209, 22);
+    --two: aliceblue;
+}
+
+body { 
+    background-image: linear-gradient(to right top, #4f4f4f, #4f4d56, #4f4a5c, #504762, #514468, #55446e, #594573, #5e4579, #664a81, #6e4e89, #765391, #7f5799);
+    background-attachment: fixed;
 }
 
 #header {
     margin-top: 20px;
-    color: green;
+    color: var(--one);
     font-size: 30px;
     font-family: Gruppo;
 }
@@ -17,12 +26,13 @@
 }
 
 #userInput {
-    background-color: aliceblue;
+    background-color: var(--two);
     color: black;
 }
 
 #userInput,
-#submit {            
+#submit,
+#preview-btn {
     border: none;
     font-size: 22px;
     line-height: 20px;
@@ -36,9 +46,22 @@
     align-items: center;
 }
 
-#submit {
-    background-color: green;
-    color: aliceblue;
+#submit,
+#preview-btn {
+    background-color: var(--one);
+    color: var(--two);
 }
 
-#hidden { display: none; }
+.hidden { display: none; }
+
+.show { display: inline-block; }
+
+#image-container {
+    /* object-fit: contain; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    height: 300px;
+    margin: 15px;
+}
