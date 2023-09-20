@@ -10,7 +10,7 @@ var albumEl = document.getElementById('album');
 var songEl = localStorage.getItem('song');
 
 function fetchSongID(songName) {
-  const url = 'https://spotify23.p.rapidapi.com/search/?q=Space+Oddity&type=tracks&offset=0&limit=1&numberOfTopResults=1';
+  const url = 'https://spotify23.p.rapidapi.com/search/?q=Space%20Oddity&type=tracks&offset=0&limit=1&numberOfTopResults=1';
   console.log(url);
   const options = {
     method: 'GET',
@@ -21,12 +21,11 @@ function fetchSongID(songName) {
   }
   fetch(url, options)
     .then(function(response) { 
-      console.log(response);
       return response.json();
     })
     .then(function(data) {
-      console.log(1);
-      songID = data.tracks.items.data.id;
+      console.log(data);
+      songID = data.tracks.items[0].data.id;
       console.log(songID);
       playSong(songID);
     })
@@ -35,10 +34,11 @@ function fetchSongID(songName) {
   });
 }
 
-var playSong = function (song) { 
+var playSong = function (songIDforPlayer) { 
   var playerEl = document.getElementById('embedded-player');
-  playerEl.src = "https://open.spotify.com/embed/track/" + songID + "?utm_source=generator&theme=0"; 
-  // playerEl.src = "https://open.spotify.com/embed/track/72Z17vmmeQKAg8bptWvpVG?utm_source=generator&theme=0"; 
+  // playerEl.src = "https://open.spotify.com/embed/track/" + songIDforPlayer + "?utm_source=generator&theme=0"; 
+  console.log("Hello");
+  playerEl.src = "https://open.spotify.com/embed/track/72Z17vmmeQKAg8bptWvpVG?utm_source=generator&theme=0"; 
 }
 
 fetchSongID(songEl);
