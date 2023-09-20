@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+:root {
+    --one: white;
+    --two: #1f8dd6;
+    --three: #2d3e50;
+}
+
 /*
  * -- BASE STYLES --
  * Most of these are inherited from Base, but I want to change a few.
@@ -12,23 +18,37 @@ body {
     line-height: 1.7em;
     color: #7f8c8d;
     font-size: 13px;
+    background-image: linear-gradient(to right, #1caf56, #00a890, #009ac4, #0087e0, #0069d6, #175acf, #2a4ac6, #3a37bc, #4f33bf, #612ec1, #7226c3, #821bc4);
+    background-attachment: fixed;
 }
 
+#header {
+    margin-top: 20px;
+    color: greenyellow;
+    font-size: 30px;
+    font-family: Gruppo;
+}
+
+.splash-container h1 {
+    display: flex;
+    font-family: Gruppo;
+    justify-content: center;
+}
 
 /*
  * -- PURE BUTTON STYLES --
  * I want my pure-button elements to look a little different
  */
 .pure-button {
-    background-color: #1f8dd6;
-    color: white;
+    background-color: var(--two);
+    color: var(--one);
     padding: 0.5em 2em;
     border-radius: 5px;
 }
 
 a.pure-button-primary {
-    background: white;
-    color: #1f8dd6;
+    background: var(--one);
+    color: var(--two);
     border-radius: 5px;
     font-size: 120%;
 }
@@ -45,7 +65,7 @@ a.pure-button-primary {
     box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
 }
 
-.home-menu { background: #2d3e50; }
+.home-menu { background: var(--three); }
 
 .pure-menu.pure-menu-fixed {
     /* Fixed menus normally have a border at the bottom. */
@@ -55,7 +75,7 @@ a.pure-button-primary {
 }
 
 .home-menu .pure-menu-heading {
-    color: white;
+    color: var(--one);
     font-weight: 400;
     font-size: 120%;
 }
@@ -66,18 +86,23 @@ a.pure-button-primary {
  * -- SPLASH STYLES --
  * This is the blue top section that appears on the page.
  */
+.bg-img {
+    background-image: url("https://img.texasmonthly.com/2022/05/boots-oneal-work-horse.jpg?auto=compress&crop=faces&fit=scale&fm=pjpg&h=768&ixlib=php-3.3.1&q=45&w=1024&wpsize=large");
+    z-index: 0;
+    filter: blur(2px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .splash-container {
-    /* background: #1f8dd6; */
-    background-image: linear-gradient(to right bottom, #700071, #6d2080, #69328e, #63419b, #5d4fa7, #5950a8, #5650a8, #5251a9, #5145a0, #513996, #512b8c, #511c81);
-    z-index: 1;
     overflow: hidden;
-    /* The following styles are required for the "scroll-over" effect */
     width: 100%;
     height: 88%;
     top: 0;
     left: 0;
     position: fixed !important;
+    filter: blur(0px);
 }
 
 .splash {
@@ -91,17 +116,18 @@ a.pure-button-primary {
     text-transform: uppercase;
 }
 
-/* This is the main heading that appears on the blue section */
+/* This is the main heading that azppears on the blue section */
 .splash-head {
     margin: 0px;
     font-size: 20px;
     font-weight: bold;
-    color: white;
+    color: var(--one);
     padding: 0px 50px 10px;
     font-weight: 100;
     border-radius: 5px;
     line-height: 1em;
 }
+
 
 #song-image {
     height:auto;
@@ -110,29 +136,29 @@ a.pure-button-primary {
 
 #author {
     padding-left: 50px;
-    color: white;
+    color: var(--one);
 }
 
 #album {
     padding-left: 50px;
-    color: white;
+    color: var(--one);
 }
 
 #spotify-player {
     padding-left: 50px;
-    color: white;
+    color: var(--one);
 }
 
 #spotify-btn-container {
     align-items: center;
     justify-items: center;
-    color: white;
+    color: var(--one);
 
 }
 
 /* This is the subheading that appears on the blue section */
 .splash-subhead {
-    color: white;
+    color: var(--one);
     letter-spacing: 0.05em;
     opacity: 0.8;
 }
@@ -140,13 +166,15 @@ a.pure-button-primary {
 
 /* This is the class used for the dark-background areas. */
 .ribbon {
-    background: #2d3e50;
+    background: var(--three);
     color: #aaa;
 }
 
 /* This is the class used for the footer */
-.footer {
-    background: #111;
+footer {
+    display: flex;
+    font-size: 20px;
+    color: #111;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -193,7 +221,6 @@ a.pure-button-primary {
  * On desktops and other large devices, we want to over-ride some
  * of the mobile and tablet styles.
  */
-@media (min-width: 78em) {
-    /* We increase the header font size even more */
-    .splash-head { font-size: 300%; }
-}
+
+ /* We increase the header font size even more */
+@media (min-width: 78em) { .splash-head { font-size: 300%; } }

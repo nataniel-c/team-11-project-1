@@ -12,21 +12,19 @@
 </head>
 
 <body>
-    <header>
-        <div class="pure-menu custom-restricted-width">
-            <span class="pure-menu-heading"id="header">Vibeify</span>
-            </header>
-
+    <header><div class="pure-menu custom-restricted-width"><span class="pure-menu-heading"id="header">Vibeify</span></div></header>
+    
     <div>
         <h1 id="image-header">Import an Image for the Vibes</h1>
-        <form action="/action_page.php">
+        <form class="submit-form">
             <input type="text" id="userInput">
             <input type="submit" id="submit">
         </form>
     </div>
 
-    <div id="uploaded-image">
-        <img class="pure-img" src="" alt="" id="hidden"></img>       
+    <div class="hidden" id="image-container">
+        <img id="uploaded-image" class="pure-img" src="" alt=""></img>
+        <button id="preview-btn">Listen to Song</button>
     </div>
 
     <script src="./assets/js/script.js"></script>
