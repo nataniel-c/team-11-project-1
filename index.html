@@ -7,26 +7,32 @@
     <title>Vibeify</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
         integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gruppo">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gruppo">
     <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-    <header><div class="pure-menu custom-restricted-width"><span class="pure-menu-heading"id="header">Vibeify</span></div></header>
-    
+    <!-- created header for the main logo -->
+    <header>
+        <div class="pure-menu custom-restricted-width"><span class="pure-menu-heading" id="header">Vibeify</span></div>
+    </header>
+
+    <!-- created input section for users to input image link -->
     <div>
-        <h1 id="image-header">Import an Image for the Vibes</h1>
+        <h1 id="image-header">Import an Image URL for the Vibes</h1>
         <form class="submit-form">
             <input type="text" id="userInput">
             <input type="submit" id="submit">
         </form>
     </div>
 
+    <!-- created hidden container to display user image after submitted -->
     <div class="hidden" id="image-container">
         <img id="uploaded-image" class="pure-img" src="" alt=""></img>
         <button id="preview-btn">Listen to Song</button>
     </div>
 
+    <!-- linked javascript file -->
     <script src="./assets/js/script.js"></script>
 
 </body>

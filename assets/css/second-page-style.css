@@ -8,6 +8,7 @@
     --one: white;
     --two: #1f8dd6;
     --three: #2d3e50;
+    --four: yellowgreen;
 }
 
 /*
@@ -16,17 +17,19 @@
  */
 body {
     line-height: 1.7em;
-    color: #7f8c8d;
+    /* color: #7f8c8d; */
     font-size: 13px;
-    background-image: linear-gradient(to right, #1caf56, #00a890, #009ac4, #0087e0, #0069d6, #175acf, #2a4ac6, #3a37bc, #4f33bf, #612ec1, #7226c3, #821bc4);
+    background-image: linear-gradient(to right, #821bc4,#0069d6, #0087e0, #009ac4, #00a890, #1caf56);
     background-attachment: fixed;
+    /* background-image: url('./assets/images/cowboy.jpg'); */
 }
 
 #header {
-    margin-top: 20px;
-    color: greenyellow;
+    margin: 20px;
+    color: var(--four);
     font-size: 30px;
     font-family: Gruppo;
+    font-weight: bolder;
 }
 
 .splash-container h1 {
@@ -86,14 +89,6 @@ a.pure-button-primary {
  * -- SPLASH STYLES --
  * This is the blue top section that appears on the page.
  */
-.bg-img {
-    background-image: url("https://img.texasmonthly.com/2022/05/boots-oneal-work-horse.jpg?auto=compress&crop=faces&fit=scale&fm=pjpg&h=768&ixlib=php-3.3.1&q=45&w=1024&wpsize=large");
-    z-index: 0;
-    filter: blur(2px);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 .splash-container {
     overflow: hidden;
@@ -103,17 +98,20 @@ a.pure-button-primary {
     left: 0;
     position: fixed !important;
     filter: blur(0px);
+    z-index: 2;
 }
 
 .splash {
     /* absolute center .splash within .splash-container */
-    width: 80%;
-    height: 50%;
+    width: 100%;
+    display: flex;
+    height: 100%;
     margin: auto;
     position: absolute;
     top: 100px; left: 0; bottom: 0; right: 0;
     text-align: left;
     text-transform: uppercase;
+    justify-content: center;
 }
 
 /* This is the main heading that azppears on the blue section */
@@ -128,10 +126,17 @@ a.pure-button-primary {
     line-height: 1em;
 }
 
+#song-image-container {
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
 
 #song-image {
-    height:auto;
-    width:100%;
+    display: block; 
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 6px 6px 5px #111;
 }
 
 #author {
@@ -147,6 +152,28 @@ a.pure-button-primary {
 #spotify-player {
     padding-left: 50px;
     color: var(--one);
+    
+}
+
+h1 {
+    display: flex;
+    margin: auto;
+    margin-top: 15%;
+    color: var(--one);
+}
+
+.back-btn {
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    line-height: 20px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: var(--four);
 }
 
 #spotify-btn-container {
@@ -173,11 +200,13 @@ a.pure-button-primary {
 /* This is the class used for the footer */
 footer {
     display: flex;
+    justify-content: center;
     font-size: 20px;
     color: #111;
     position: fixed;
     bottom: 0;
     width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /*
