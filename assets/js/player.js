@@ -8,9 +8,19 @@ var authorEl = document.getElementById('author');
 var albumEl = document.getElementById('album');
 
 var songEl = localStorage.getItem('song');
+var songImg = localStorage.getItem('song-img');
 
+// created function to display the song image
+function fillImage() {
+  console.log(songImg);
+  imageEl.src = songImg;
+}
+
+// created function to fetch the song ID from spotify 
 function fetchSongID(songName) {
-  const url = 'https://spotify23.p.rapidapi.com/search/?q=Space%20Oddity&type=tracks&offset=0&limit=1&numberOfTopResults=1';
+  console.log(songName);
+  songName.replace(/\s/g, '%20');
+  const url = 'https://spotify23.p.rapidapi.com/search/?q=' + songName + '&type=tracks&offset=0&limit=1&numberOfTopResults=1';
   console.log(url);
   const options = {
     method: 'GET',
@@ -19,32 +29,24 @@ function fetchSongID(songName) {
       'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
     }
   }
-  fetch(url, options)
-    .then(function(response) { 
-      return response.json();
-    })
-    .then(function(data) {
+  fetch(url, options).then(function(response) { return response.json(); }).then(function(data) {
       console.log(data);
       songID = data.tracks.items[0].data.id;
       console.log(songID);
       playSong(songID);
-    })
-  .catch(function(error) { 
-    alert("Error: Could not retrieve song data"); 
+    }).catch(function(error) { 
+    alert("Error: Could not retrieve song data");
+    console.log(error);
   });
 }
 
+// created function to play selected song using the embedded spotify player
 var playSong = function (songIDforPlayer) { 
   var playerEl = document.getElementById('embedded-player');
-  // playerEl.src = "https://open.spotify.com/embed/track/" + songIDforPlayer + "?utm_source=generator&theme=0"; 
-  console.log("Hello");
-  playerEl.src = "https://open.spotify.com/embed/track/72Z17vmmeQKAg8bptWvpVG?utm_source=generator&theme=0"; 
+  playerEl.src = "https://open.spotify.com/embed/track/" + songIDforPlayer + "?utm_source=generator&theme=0"; 
+  // playerEl.src = "https://open.spotify.com/embed/track/72Z17vmmeQKAg8bptWvpVG?utm_source=generator&theme=0"; 
 }
 
 fetchSongID(songEl);
-
+fillImage();
 console.log(songEl);
-
-// https://www.youtube.com/watch?v=c5daGZ96QGU
-// https://www.youtube.com/watch?v=c5daGZ96QGU
-// https://www.youtube.com/watch?v=c5daGZ96QGU
