@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --one: rgb(22, 209, 22);
+    --two: aliceblue;
+}
+
+/* styled the background with color gradient */
+body { 
+    background-image: linear-gradient(to right top, #4f4f4f, #4f4d56, #4f4a5c, #504762, #514468, #55446e, #594573, #5e4579, #664a81, #6e4e89, #765391, #7f5799);
+    background-attachment: fixed;
+}
+
+/* styled header element */
+#header {
+    margin-top: 20px;
+    color: var(--one);
+    font-size: 30px;
+    font-family: Gruppo;
+    font-weight: bolder;
+}
+
+#image-header {
+    color: white;
+    text-align: center;
+}
+
+#userInput {
+    background-color: var(--two);
+    color: black;
+}
+
+/* styled the userInput section, the submit button, and the preview button */
+#userInput,
+#submit,
+#preview-btn {
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    line-height: 20px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px 24px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#submit,
+#preview-btn {
+    background-color: var(--one);
+    color: var(--two);
+}
+
+/* added hidden class for preview elements */
+.hidden { display: none; }
+
+.show { display: inline-block; }
+
+#uploaded-image {
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+}
+
+/* created style for the image container */
+#image-container { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 35%;
+    height: 35%;
+}

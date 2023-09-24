@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibeify — Music Player</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gruppo">
+    <link rel="stylesheet" href="./assets/css/second-page-style.css">
+</head>
+<body class="body">
+
+    <!-- created header with main logo -->
+    <header id="header">VIBEIFY</header>
+
+    <div class="bg-img" id="bg-img">
+        
+    </div>
+<!-- created container for song and image elements -->
+    <div class="splash-container">
+        <div>
+            <h1>This song matches the vibe of your image:</h1>
+            <div class="splash pure-g">
+                <div id=song-image-container class="pure-u-1-2"><img id="song-image" src=""></div>
+                <div id="song-info" class="pure-u-1-2">
+                    <div id="spotify-player">
+                        <iframe id="embedded-player" style="border-radius:12px" src="https://open.spotify.com/embed/track/37pKTyMwalomKCZjxTc2QZ?utm_source=generator&theme=0" 
+                        width="100%" height="352" frameBorder="0" allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div><a href="./index.html" class="back-btn">Go Back</a></div>
+            </div>
+        </div>
+        
+    </div>
+
+    
+    <!-- created footer and linked second javascript file -->
+    <footer class="l-box is-center">Made by Team 11!</footer>
+    
+    <script src="./assets/js/player.js"></script>
+</body>
+</html>
