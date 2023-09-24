@@ -32,7 +32,7 @@ body {
     font-weight: bolder;
 }
 
-.splash-container h1 {
+h1 {
     display: flex;
     font-family: Gruppo;
     justify-content: center;
@@ -83,35 +83,37 @@ a.pure-button-primary {
     font-size: 120%;
 }
 
-
-
 /*
  * -- SPLASH STYLES --
  * This is the blue top section that appears on the page.
  */
 
 .splash-container {
-    overflow: hidden;
-    width: 100%;
-    height: 88%;
+    display: flex;
+    flex-shrink: 2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    max-height: 80%;
     top: 0;
     left: 0;
-    position: fixed !important;
     filter: blur(0px);
     z-index: 2;
 }
 
 .splash {
     /* absolute center .splash within .splash-container */
-    width: 100%;
+    max-width: 100%;
+    max-height: 20%;
     display: flex;
-    height: 100%;
-    margin: auto;
-    position: absolute;
-    top: 100px; left: 0; bottom: 0; right: 0;
-    text-align: left;
-    text-transform: uppercase;
+    align-items: center;
     justify-content: center;
+    flex-shrink: 2;
+    padding: 5%;
+    margin: 0;
 }
 
 /* This is the main heading that azppears on the blue section */
@@ -127,60 +129,46 @@ a.pure-button-primary {
 }
 
 #song-image-container {
-    display: block;
-    margin: auto;
-    border-radius: 10px;
+    display: flex;
+    margin: 1% 0 1% 5%;
 }
 
 #song-image {
-    display: block; 
-    width: 100%;
+    display: flex;
+    max-width: 80%;
     border-radius: 10px;
     box-shadow: 6px 6px 5px #111;
 }
 
-#author {
-    padding-left: 50px;
-    color: var(--one);
-}
-
-#album {
-    padding-left: 50px;
-    color: var(--one);
-}
-
 #spotify-player {
-    padding-left: 50px;
-    color: var(--one);
-    
+    display: flex;
+    max-width: 100%;
+    margin: 0 10% 0 0;
+    color: var(--one);    
 }
 
 h1 {
     display: flex;
-    margin: auto;
-    margin-top: 15%;
+    margin: 2% 5% 0 5%;
     color: var(--one);
 }
 
 .back-btn {
     border: none;
     border-radius: 5px;
+    max-width: 20%;
     font-size: 22px;
-    line-height: 20px;
-    margin: 20px;
-    padding: 20px;
-    text-align: center;
+    line-height: 12px;
+    padding: 15px;
+    margin-bottom: 5%;
     cursor: pointer;
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
+    text-align: center;
+    font-weight: bolder;
     background-color: var(--four);
-}
-
-#spotify-btn-container {
-    align-items: center;
-    justify-items: center;
-    color: var(--one);
-
+    font-family: Gruppo;
 }
 
 /* This is the subheading that appears on the blue section */
@@ -232,10 +220,10 @@ footer {
 
     /* We decrease the width of the .splash, since we have more width
     to work with */
-    .splash {
+    /* .splash {
         width: 50%;
         height: 50%;
-    }
+    } */
 
     .splash-head { font-size: 250%; }
 

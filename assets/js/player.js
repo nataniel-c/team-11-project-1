@@ -3,12 +3,11 @@
 
 // set elements in the second-page html as objects
 var imageEl = document.getElementById('song-image');
-var songTitleEl = document.getElementById('song-title');
-var authorEl = document.getElementById('author');
-var albumEl = document.getElementById('album');
 
+// retrieve localStorage data
 var songEl = localStorage.getItem('song');
 var songImg = localStorage.getItem('song-img');
+console.log(localStorage);
 
 // created function to display the song image
 function fillImage() {
