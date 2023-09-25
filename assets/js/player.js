@@ -18,7 +18,11 @@ function fillImage() {
 // created function to fetch the song ID from spotify 
 function fetchSongID(songName) {
   console.log(songName);
-  songName.replace(/\s/g, '%20');
+  console.log(/\s/.test(songName));
+  if (/\s/.test(songName)){
+    songName.replace(/\s/g, '%20');
+  }
+  
   const url = 'https://spotify23.p.rapidapi.com/search/?q=' + songName + '&type=tracks&offset=0&limit=1&numberOfTopResults=1';
   console.log(url);
   const options = {
