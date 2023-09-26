@@ -1,8 +1,8 @@
 // Phi's ChatGPT key: b3aceeb13amshd617f234ed3b59dp130b72jsn2d2b88275752
-const chatGPTKey = 'b3aceeb13amshd617f234ed3b59dp130b72jsn2d2b88275752';
+// const chatGPTKey = 'b3aceeb13amshd617f234ed3b59dp130b72jsn2d2b88275752';
 
 // Nataniel's ChatGPT key: 'f187835d25mshfafee30a0e4bdf5p1f3f9djsn48b7ead96d1e'
-// const chatGPTKey = 'f187835d25mshfafee30a0e4bdf5p1f3f9djsn48b7ead96d1e';
+ const chatGPTKey = 'f187835d25mshfafee30a0e4bdf5p1f3f9djsn48b7ead96d1e';
 
 localStorage.clear();
 
